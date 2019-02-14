@@ -47,3 +47,14 @@ class Post(models.Model):
 	def increase_views(self):
 		self.views += 1
 		self.save(update_fields=['views'])
+
+	#如果没有填写excerpt字段，直接使用truncatechars模板过滤器截取body前面的字段
+	def save(self, *args, **kwargs):
+		global excerpt
+		# 如果填写摘要
+		if self.excerpt:
+
+			self.excerpt = excerpt
+
+		# 调用父类的 save 方法将数据保存到数据库中
+		super(Post, self).save(*args, **kwargs)
