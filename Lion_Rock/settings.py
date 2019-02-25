@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ifk4_rpv@c@y*k1my0^4zd9+1%oinulsq2v+!u(_g5wypi^f(r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.lionrock.info']
 
@@ -85,8 +85,8 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'NAME': 'mysql',
-        'USER': 'xxxxxx',
-        'PASSWORD': 'xxxxxx',
+        'USER': 'root',
+        'PASSWORD': 'lcl931224',
     }
 }
 
